@@ -1,0 +1,53 @@
+// positions
+@each $position in $positions {
+  .position-#{$position} {
+    position: $position;
+  }
+}
+
+// element positions
+.position-top-left {
+  top: 8px;
+  left: 16px;
+}
+
+.position-top-center {
+  top: 8px;
+  left: 0;
+  right: 0;
+}
+
+.position-top-right {
+  top: 8px;
+  right: 16px;
+}
+
+.position-top {
+  top: 8px;
+}
+
+.position-bottom-left {
+  bottom: 8px;
+  left: 16px;
+}
+
+.position-bottom-center {
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.position-bottom-right {
+  bottom: 8px;
+  right: 16px;
+}
+
+.position-bottom {
+  bottom: 8px;
+}
+
+.position-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

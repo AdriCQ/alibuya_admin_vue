@@ -6,7 +6,10 @@ import store from '@/store/store';
 import vuetify from './plugins/vuetify';
 
 // SCSS
-require('@/assets/scss/main.scss');
+require('@/scss/main.scss');
+
+// Register v-section
+Vue.component('v-section', () => import('@/components/layouts/Section.vue'));
 
 Vue.config.productionTip = false;
 

@@ -1,0 +1,23 @@
+.v-input {
+  fieldset {
+    border-width: 1px !important;
+  }
+  .v-input--is-focused {
+    border-color: $primary-color !important;
+  }
+}
+
+// utils class
+.v-input.input-small {
+  .v-input__control {
+    min-height: 32px !important;
+  }
+}
+
+.no-hint {
+  margin: 0;
+  .v-messages,
+  .v-text-field__details {
+    display: none;
+  }
+}

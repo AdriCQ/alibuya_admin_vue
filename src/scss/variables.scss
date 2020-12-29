@@ -1,0 +1,5 @@
+// vuetify variables
+@import "~vuetify/src/styles/settings/_variables";
+
+/* override defaults variables */
+$grid-gutter: $spacer * 3;

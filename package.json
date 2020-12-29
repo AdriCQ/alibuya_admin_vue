@@ -1,5 +1,5 @@
 {
-  "name": "Alibuya",
+  "name": "Alibuya_Admin",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,6 +15,8 @@
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.5.1",
+    "vue-qrcode": "^0.3.3",
+    "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.2.0",
     "vue-slick-carousel": "^1.0.6",
     "vuelidate": "^0.7.5",

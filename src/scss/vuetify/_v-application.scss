@@ -1,0 +1,17 @@
+.v-application {
+  font-family: "Arial", Gadget, sans-serif;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+
+  #app-content {
+    padding-top: 3.5rem;
+    .app-container {
+      min-height: 500px;
+    }
+  }
+
+  * {
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+}

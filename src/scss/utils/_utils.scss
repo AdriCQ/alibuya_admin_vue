@@ -1,0 +1,104 @@
+$table-border-width: 1px;
+$table-border-color: #dee2e6;
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-selector {
+  border: solid 1px $border-color;
+  &:hover {
+    box-shadow: 1px 2px 10px $secondary-color;
+  }
+}
+
+@for $value from 1rem through 50rem {
+  .w-#{$value} {
+    width: #{$value}rem;
+  }
+}
+
+@for $value from 1rem through 50rem {
+  .min-w-#{$value} {
+    min-width: #{$value}rem;
+  }
+}
+
+@for $value from 1rem through 50rem {
+  .max-w-#{$value} {
+    max-width: #{$value}rem;
+  }
+}
+
+@for $value from 1rem through 50rem {
+  .h-#{$value} {
+    height: #{$value}rem;
+  }
+}
+
+.full-width,
+.w-100 {
+  width: 100%;
+}
+
+.fit-width {
+  width: fit-content;
+}
+
+// tables
+.table-bordered {
+  border: $table-border-width solid $table-border-color;
+
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: 2 * $table-border-width;
+    }
+  }
+}
+
+.table-borderless {
+  th,
+  td,
+  thead th,
+  tbody + tbody {
+    border: 0;
+  }
+}
+
+// text
+.text-transform-none {
+  text-transform: none;
+}
+
+.text-single-line {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.text-link {
+  @extend .blue--text;
+  @extend .text--darken-2;
+  @extend .cursor-pointer;
+  @include hover {
+  }
+}
+
+.text-color-body {
+  @extend .grey--text;
+  @extend .text--darken-4;
+}
