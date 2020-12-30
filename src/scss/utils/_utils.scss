@@ -12,6 +12,11 @@ $table-border-color: #dee2e6;
   transform: translate(-50%, -50%);
 }
 
+.h-centered {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 .box-selector {
   border: solid 1px $border-color;
   &:hover {

@@ -1,11 +1,5 @@
 <template>
-  <div id="pack-home-view">
-    <v-section>
-      <v-card>
-        <v-card-title>Paquetes</v-card-title>
-      </v-card>
-    </v-section>
-  </div>
+  <div id="shop-home-view"></div>
 </template>
 
 <script lang='ts'>
@@ -14,16 +8,11 @@ import { AppStore } from "@/store";
 import { ScrollTop } from "@/utils";
 
 @Component
-export default class PackHomeView extends Vue {
+export default class ShopHomeView extends Vue {
   beforeMount() {
     AppStore.generateBreadcrumb([
       {
         text: "Tienda",
-        to: { name: "shop.home" },
-      },
-      {
-        text: "Paquetes",
-        to: { name: "pack.home" },
       },
     ]);
   }

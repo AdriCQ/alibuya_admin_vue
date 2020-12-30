@@ -21,6 +21,7 @@
 <script lang='ts'>
 import { Vue, Component } from "vue-property-decorator";
 import { AppStore } from "@/store";
+import { ScrollTop } from "@/utils";
 
 @Component({
   components: {
@@ -28,8 +29,12 @@ import { AppStore } from "@/store";
   },
 })
 export default class PendingPackView extends Vue {
-  beforeMount() {
+  mounted() {
     AppStore.generateBreadcrumb([
+      {
+        text: "Tienda",
+        to: { name: "shop.home" },
+      },
       {
         text: "Paquetes",
         to: { name: "pack.home" },
@@ -40,7 +45,9 @@ export default class PendingPackView extends Vue {
         to: { name: "pack.pending" },
       },
     ]);
+    ScrollTop();
   }
+
   get pendingPacks() {
     return [1, 2, 3, 4];
   }

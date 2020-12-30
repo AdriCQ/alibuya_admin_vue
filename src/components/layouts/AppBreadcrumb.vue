@@ -15,3 +15,9 @@ export default class AppBreadcrumb extends Vue {
   }
 }
 </script>
+
+<style>
+.v-breadcrumbs li {
+  font-size: 0.75rem !important;
+}
+</style>

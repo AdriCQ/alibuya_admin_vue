@@ -11,6 +11,7 @@
 <script lang='ts'>
 import { Vue, Component } from "vue-property-decorator";
 import { AppStore } from "@/store";
+import { ScrollTop } from "@/utils";
 
 @Component
 export default class NewShoppingView extends Vue {
@@ -18,12 +19,16 @@ export default class NewShoppingView extends Vue {
     AppStore.generateBreadcrumb([
       {
         text: "Tienda",
-        to: { name: "shop.new" },
+        to: { name: "shop.home" },
       },
       {
         text: "Compras",
       },
     ]);
+  }
+
+  mounted() {
+    ScrollTop();
   }
 }
 </script>

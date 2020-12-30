@@ -1,0 +1,1 @@
+export type TProductStatus = "ready" | "waiting" | "unavailable";

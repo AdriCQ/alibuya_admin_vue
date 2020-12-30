@@ -6,6 +6,10 @@ export const shopRoutes: RouteConfig = {
   component: AppLayout,
   children: [
     {
+      name: 'shop.home',
+      path: 'home',
+      component: () => import('@/views/shop/Home.vue'),
+    }, {
       name: 'shop.new',
       path: 'new',
       component: () => import('@/views/shop/NewShopping.vue'),
