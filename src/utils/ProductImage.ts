@@ -1,5 +1,5 @@
-import { IShopImage } from '@/types';
 import { SERVER_URL } from '@/utils';
+import { IShopImage } from '@/types';
 /**
  * Product image
  */

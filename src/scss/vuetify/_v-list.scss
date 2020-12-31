@@ -1,0 +1,17 @@
+.v-list {
+  .small-list {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 0;
+  }
+  .list-icon {
+    margin-right: 8px !important;
+    min-width: 0px !important;
+
+    .v-icon {
+      margin-right: 8px;
+    }
+  }
+}

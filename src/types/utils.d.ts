@@ -1,3 +1,5 @@
+import { AxiosResponse } from 'axios';
+
 export type TRouteLink = {
   name?: string;
   path?: string;
@@ -33,18 +35,18 @@ export interface ICountry {
   name: string;
 }
 
-export interface IShopImage {
-  id: number;
-  tags?: string[];
-  paths: {
-    xs?: string;
-    sm?: string;
-    md?: string;
-    lg?: string;
-    xl?: string;
-  };
-}
+/**
+ * -----------------------------------------
+ * Vuejs
+ * -----------------------------------------
+ */
 
+export interface IRoute {
+  name: string;
+  path?: string;
+  params?: IDictionary<string>;
+  query?: IDictionary<string>;
+}
 /**
  * -----------------------------------------
  * Vuetify
@@ -52,7 +54,7 @@ export interface IShopImage {
  */
 
 /**
- * 
+ * Ivselect item
  */
 export interface IVSelectItem {
   text?: string;
@@ -60,7 +62,6 @@ export interface IVSelectItem {
 }
 
 export type TStatusColor = 'error' | 'info' | 'warning' | 'success' | 'primary' | 'secondary';
-
 
 /**
  * -----------------------------------------
@@ -91,3 +92,43 @@ export interface ITransletable {
   es?: string;
   en?: string;
 }
+
+/**
+ * -----------------------------------------
+ * Axios
+ * -----------------------------------------
+ */
+
+
+/**
+ * @interface IApiResponse<T>
+ */
+interface IApiResponse<T> {
+  STATUS: boolean;
+  DATA: T;
+  ERRORS: never;
+}
+
+interface IPaginatedData<T> {
+  data: T;
+  current_page: number;
+  first_page_url: string;
+  from: number;
+  next_page_url: string;
+  path: string;
+  per_page: number;
+  prev_page_url: string;
+  to: number;
+}
+
+interface IApiResponsePaginated<T> {
+  STATUS: boolean;
+  DATA: IPaginatedData<T>;
+  ERRORS: never;
+}
+
+/**
+ * @type ApiResponse<T>
+ */
+export type ApiResponse<T> = Promise<AxiosResponse<IApiResponse<T>>>;
+export type ApiResponsePaginated<T> = Promise<AxiosResponse<IApiResponsePaginated<T>>>;

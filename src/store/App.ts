@@ -43,6 +43,14 @@ class AppModule extends VuexModule {
       this.cookieAcceted = store.cookieAcceted;
     }
   }
+
+  /**
+   * Handles error
+   * @param errors 
+   */
+  handleError(errors: string | string[]) {
+    console.log(errors);
+  }
 }
 // register module (could be in any file)
 export const AppStore = new AppModule({ store, name: 'App' });

@@ -1,18 +1,13 @@
 <template>
-  <v-card class="pack-base-widget">
-    <v-card-text class="pb-0 my-0 pt-1">
-      <v-icon color="warning" class="float-right">mdi-alert-circle</v-icon>
-
-      <h4 class="mt-1">Cantidad: 7</h4>
-      <h4>17/07/2020</h4>
-    </v-card-text>
-    <v-list color="transparent" dense>
+  <v-card>
+    <v-card-text>Abraham Bla bla</v-card-text>
+    <v-list color="transparent">
       <v-list-item
         class="small-list"
         v-for="i in 5"
         :key="`${i}`"
         link
-        :to="{ name: 'product.details' }"
+        :to="{ name: 'pack.details' }"
       >
         <v-list-item-icon class="list-icon">
           <v-icon small color="success">mdi-check-circle</v-icon>
@@ -20,7 +15,7 @@
           <v-icon small>mdi-timer</v-icon> -->
         </v-list-item-icon>
 
-        Product {{ i }}
+        Paquete {{ i }}
       </v-list-item>
     </v-list>
     <v-card-actions class="d-flex">
@@ -28,7 +23,7 @@
         x-small
         @click="
           goto({
-            name: 'pack.details',
+            name: 'pack.pending',
           })
         "
         >Detalles</v-btn
@@ -43,5 +38,5 @@ import { Component, Mixins } from "vue-property-decorator";
 import { AppMixin } from "@/mixins";
 
 @Component
-export default class PackBaseWidget extends Mixins(AppMixin) {}
+export default class PackCard extends Mixins(AppMixin) {}
 </script>

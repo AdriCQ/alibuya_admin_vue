@@ -9,7 +9,7 @@
                 ><v-icon small class="mr-2">mdi-check-circle</v-icon
                 >Listo</v-chip
               >
-              <v-chip color="error" v-if="productStatus === 'unavailable'"
+              <v-chip color="error" v-if="productStatus === 'canceled'"
                 ><v-icon small class="mr-2">mdi-close-circle</v-icon>No
                 Disponible</v-chip
               >
@@ -57,7 +57,7 @@
         <v-card-actions>
           <v-btn small @click="setStatus('waiting')">En Espera</v-btn>
           <v-btn color="success" small @click="setStatus('ready')">Listo</v-btn>
-          <v-btn color="error" small @click="setStatus('unavailable')"
+          <v-btn color="error" small @click="setStatus('canceled')"
             >No Disponible</v-btn
           >
         </v-card-actions>

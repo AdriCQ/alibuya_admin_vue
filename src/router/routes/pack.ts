@@ -13,6 +13,10 @@ export const packRoutes: RouteConfig = {
       name: 'pack.pending',
       path: 'pending',
       component: () => import('@/views/shop/packs/Pending.vue'),
+    }, {
+      name: 'pack.details',
+      path: 'pending',
+      component: () => import('@/views/shop/packs/Details.vue'),
     }
   ],
 };
