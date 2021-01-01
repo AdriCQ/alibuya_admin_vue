@@ -47,6 +47,7 @@ export interface IRoute {
   params?: IDictionary<string>;
   query?: IDictionary<string>;
 }
+
 /**
  * -----------------------------------------
  * Vuetify
@@ -74,7 +75,14 @@ export interface IEventTarget extends globalThis.EventTarget {
 }
 
 export type TImage = File | string | File[] | string[];
-
+/**
+ * Ialert
+ */
+export interface IAlert {
+  text: string;
+  type?: 'info' | 'warning' | 'error' | 'success';
+  to?: IRoute;
+}
 /**
  * -----------------------------------------
  * Colors

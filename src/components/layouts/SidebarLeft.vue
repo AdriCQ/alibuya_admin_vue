@@ -18,14 +18,18 @@
         </v-list-item-title>
       </v-list-item>
 
-      <v-divider />
+      <v-divider class="mb-1" />
 
       <v-list-item
         v-for="(page, pageKey) in pages"
         :key="`list-item-${pageKey}`"
         link
         exact
+        :to="page.to"
       >
+        <v-list-item-icon>
+          <v-icon>{{ page.icon }}</v-icon>
+        </v-list-item-icon>
         <v-list-item-title>{{ page.label }} </v-list-item-title>
       </v-list-item>
     </v-list>

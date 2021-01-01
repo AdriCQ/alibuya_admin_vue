@@ -10,6 +10,11 @@ export class PackHelper {
     products: [],
   };
 
+  /**
+   * Instances pack helper
+   * @param _full boolean
+   * @returns IPack
+   */
   static instance(_full = false) {
     if (_full) {
       this._pack.delivery_method = '';

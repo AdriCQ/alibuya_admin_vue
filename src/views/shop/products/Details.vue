@@ -1,21 +1,11 @@
 <template>
   <div id="product-details-view">
     <v-section>
-      <v-card>
+      <v-card flat>
         <v-row>
           <v-col xs="12" sm="4" md="4" lg="3" xl="3">
             <v-card-text>
-              <v-chip color="success" v-if="productStatus === 'ready'"
-                ><v-icon small class="mr-2">mdi-check-circle</v-icon
-                >Listo</v-chip
-              >
-              <v-chip color="error" v-if="productStatus === 'canceled'"
-                ><v-icon small class="mr-2">mdi-close-circle</v-icon>No
-                Disponible</v-chip
-              >
-              <v-chip v-if="productStatus === 'waiting'"
-                ><v-icon small class="mr-2">mdi-timer</v-icon>En Espera</v-chip
-              >
+              <status-menu />
               <v-img
                 src="img/alibuya_300x225.png"
                 class="w-10 h-centered"
@@ -52,15 +42,6 @@
           </v-col>
         </v-row>
         <hr />
-        <v-card-subtitle>Modificar Estado</v-card-subtitle>
-
-        <v-card-actions>
-          <v-btn small @click="setStatus('waiting')">En Espera</v-btn>
-          <v-btn color="success" small @click="setStatus('ready')">Listo</v-btn>
-          <v-btn color="error" small @click="setStatus('canceled')"
-            >No Disponible</v-btn
-          >
-        </v-card-actions>
       </v-card>
     </v-section>
   </div>
@@ -69,10 +50,13 @@
 <script lang='ts'>
 import { Vue, Component } from "vue-property-decorator";
 import { AppStore } from "@/store";
-import { TProductStatus } from "@/types";
 import { ScrollTop } from "@/utils";
 
-@Component
+@Component({
+  components: {
+    "status-menu": () => import("@/components/popups/StatusMenu.vue"),
+  },
+})
 export default class ProductDetailesView extends Vue {
   beforeMount() {
     AppStore.generateBreadcrumb([
@@ -91,12 +75,6 @@ export default class ProductDetailesView extends Vue {
 
   mounted() {
     ScrollTop();
-  }
-
-  productStatus: TProductStatus = "ready";
-
-  setStatus(_status: TProductStatus) {
-    this.productStatus = _status;
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div id="shop-home-view">
     <v-section>
-      <v-card>
+      <v-card flat>
         <v-card-title>Tienda</v-card-title>
         <v-card-text>
           <v-row justify="center">

@@ -1,7 +1,7 @@
 <template>
   <div id="pack-home-view">
     <v-section>
-      <v-card>
+      <v-card flat>
         <v-card-title>Paquetes</v-card-title>
       </v-card>
     </v-section>

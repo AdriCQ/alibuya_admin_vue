@@ -2,11 +2,13 @@
   font-family: "Arial", Gadget, sans-serif;
   word-break: normal !important;
   overflow-wrap: normal !important;
+  background-color: rgba(0, 0, 0, 0.08) !important;
 
   #app-content {
     padding-top: 3.5rem;
     .app-container {
       min-height: 500px;
+      padding-bottom: 1rem;
     }
   }
 

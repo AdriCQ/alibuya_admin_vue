@@ -1,15 +1,22 @@
 import { ILinkIconLabel } from '@/types';
 export const PAGES: ILinkIconLabel[] = [
   {
-    label: "Paquetes",
+    label: "Tienda",
+    to: {
+      name: 'shop.home'
+    },
+    icon: 'mdi-shopping'
   },
   {
-    label: "Productos"
+    label: "Análisis",
+    icon: 'mdi-chart-bar'
   },
   {
-    label: "Anuncios"
+    label: "Usuarios",
+    icon: 'mdi-account-multiple'
   },
   {
-    label: "Usuarios"
+    label: "Ajustes",
+    icon: 'mdi-xml'
   },
 ];

@@ -1,7 +1,7 @@
 <template>
   <div id="new-shopping-view">
     <v-section>
-      <v-card>
+      <v-card flat>
         <v-card-title> Nuevas Compras </v-card-title>
         <v-card-text>
           <v-row>

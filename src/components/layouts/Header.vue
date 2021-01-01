@@ -3,21 +3,19 @@
     <v-app-bar-nav-icon @click="toggleSidebarLeft">
       <v-icon> mdi-menu </v-icon>
     </v-app-bar-nav-icon>
-    <v-list
-      class="d-flex"
+    <v-spacer />
+    <v-btn
+      link
       color="transparent"
-      v-if="$vuetify.breakpoint.smAndUp"
+      elevation="0"
+      v-for="(page, pageKey) in pages"
+      :key="`tab-page-${pageKey}`"
+      right
+      :to="page.to"
     >
-      <v-list-item
-        exact
-        dense
-        link
-        v-for="(page, pageKey) in pages"
-        :key="`tab-page-${pageKey}`"
-      >
-        {{ page.label }}
-      </v-list-item>
-    </v-list>
+      <v-icon>{{ page.icon }} </v-icon>
+      <template v-if="$vuetify.breakpoint.smAndUp">{{ page.label }}</template>
+    </v-btn>
   </v-app-bar>
 </template>
 <script lang='ts'>

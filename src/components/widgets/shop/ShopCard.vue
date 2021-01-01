@@ -28,7 +28,6 @@
         "
         >Detalles</v-btn
       >
-      <v-btn x-small>Editar</v-btn>
     </v-card-actions>
   </v-card>
 </template>
