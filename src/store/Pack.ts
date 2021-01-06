@@ -1,8 +1,6 @@
 import { VuexModule, Module } from 'vuex-class-modules';
 import store from '@/store/store';
 import { IPack } from '@/types';
-import { PackHelper } from '@/helpers';
-
 
 @Module({ generateMutationSetters: true })
 class PackModule extends VuexModule {

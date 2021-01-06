@@ -1,7 +1,7 @@
 /**
  * 
  */
-export default class Storage {
+export class Storage {
   private name!: string;
   private data!: unknown
 

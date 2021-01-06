@@ -15,13 +15,14 @@ class ProductModule extends VuexModule {
    * Get Product by Id
    * @param _productId number
    */
-  async getProductById(_productId: number) {
-    AxiosHelper.callableService(ProductHelper.getById(_productId), (_resp: IApiResponse<IProduct>) => {
-      this.product = _resp.DATA;
-      console.log(this.product);
-    }).catch(error => {
-      AppStore.handleError(error);
-    })
+  getProductById(_productId: number) {
+    return new Promise((resolve, reject) => {
+      AxiosHelper.callableService(ProductHelper.getById(_productId), (_resp: IApiResponse<IProduct>) => {
+        this.product = _resp.DATA;
+        console.log(this.product);
+      }).then(resp => resolve(resp))
+        .catch(error => reject(error))
+    });
   }
 
 }

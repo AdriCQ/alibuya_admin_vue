@@ -1,7 +1,7 @@
 import { VuexModule, Module } from 'vuex-class-modules';
 import store from '@/store/store';
 import { TLang } from '@/types';
-import Storage from '@/utils/Storage';
+import { Storage } from '@/utils';
 import { IBreadcrumbItem } from '@/types';
 
 const storage = new Storage("appStorage");

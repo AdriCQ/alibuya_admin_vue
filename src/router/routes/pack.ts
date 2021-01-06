@@ -1,9 +1,11 @@
 import { RouteConfig } from 'vue-router';
 import AppLayout from '@/components/layouts/AppLayout.vue';
+import { BaseAuthGuard } from '@/router/guards';
 
 export const packRoutes: RouteConfig = {
   path: '/pack',
   component: AppLayout,
+  beforeEnter: BaseAuthGuard,
   children: [
     {
       name: 'pack.home',

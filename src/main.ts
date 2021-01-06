@@ -6,12 +6,16 @@ import store from '@/store/store';
 import vuetify from './plugins/vuetify';
 import Axios from 'axios';
 import { SERVER_URL } from '@/utils';
+import Vuelidate from 'vuelidate';
 
 // SCSS
 require('@/scss/main.scss');
 
 // Register v-section
 Vue.component('v-section', () => import('@/components/layouts/Section.vue'));
+
+// Vuelidate
+Vue.use(Vuelidate);
 
 // Setup axios
 Axios.defaults.timeout = 10000;

@@ -1,9 +1,11 @@
 import { RouteConfig } from 'vue-router';
 import AppLayout from '@/components/layouts/AppLayout.vue';
+import { BaseAuthGuard } from '@/router/guards';
 
 export const shopRoutes: RouteConfig = {
   path: '/shop',
   component: AppLayout,
+  beforeEnter: BaseAuthGuard,
   children: [
     {
       name: 'shop.home',
